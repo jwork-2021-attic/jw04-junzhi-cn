@@ -132,7 +132,7 @@ public class WorldScreen implements Screen {
     }
 
     private Calabash getBroByRank(Calabash[][] bros, int rank) {
-        for ( i=0;i<256;i++) {
+        for (int i=0;i<256;i++) {
             Calabash bro=bros[i/16][i%16];
             if (bro.getRank() == rank) {
                 return bro;
@@ -153,14 +153,14 @@ public class WorldScreen implements Screen {
         }
     }
 
-    int i = 0;
+    int ii = 0;
 
     @Override
     public Screen respondToUserInput(KeyEvent key) {
 
-        if (i < this.sortSteps.length) {
-            this.execute(bros, sortSteps[i]);
-            i++;
+        if (ii < this.sortSteps.length) {
+            this.execute(bros, sortSteps[ii]);
+            ii++;
         }
 
         return this;
