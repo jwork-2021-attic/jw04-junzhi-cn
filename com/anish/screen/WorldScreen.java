@@ -3,6 +3,7 @@ package com.anish.screen;
 import java.awt.Color;
 import java.awt.event.KeyEvent;
 
+import com.anish.calabashbros.QuickSorter;
 import com.anish.calabashbros.BubbleSorter;
 import com.anish.calabashbros.Calabash;
 import com.anish.calabashbros.World;
@@ -115,7 +116,7 @@ public class WorldScreen implements Screen {
             world.put(bros[k/16][k%16], k/16*2, k%16*2);
         }
 
-        BubbleSorter<Calabash> b = new BubbleSorter<>();
+        QuickSorter<Calabash> b = new QuickSorter<>();
         b.load(bros);
         b.sort();
 
