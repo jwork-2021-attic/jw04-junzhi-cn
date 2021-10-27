@@ -20,22 +20,39 @@ public class Thing {
         this.tile = tile;
     }
 
-    Thing(Color color, char glyph, World world) {
+    public Thing(Color color, char glyph, World world) {
         this.color = color;
         this.glyph = glyph;
         this.world = world;
     }
 
-    private final Color color;
+    protected Color color;
 
     public Color getColor() {
         return this.color;
     }
 
-    private final char glyph;
+    protected char glyph;
 
     public char getGlyph() {
         return this.glyph;
     }
+    public void changec(){
+        int r=(int) (System.currentTimeMillis()%(256));
 
+        try { 
+            Thread.sleep(100);
+         } catch (Exception e) { 
+             System.out.println("err"); 
+         }
+        int g=(int) (System.currentTimeMillis()%(256));
+
+        try { 
+            Thread.sleep(100);
+         } catch (Exception er) { 
+             System.out.println("err"); 
+         }
+        int b=(int) (System.currentTimeMillis()%(256));
+        this.color=new Color(r, g, b);
+    }
 }
